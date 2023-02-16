@@ -19,6 +19,7 @@ pipeline{
         steps {
           withAWS(region:'us-east-1', credentials:'aws-static') {
             s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'jenkinsbucket042')
+            s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'indexx.html', bucket:'jenkinsbucket042')
           }
         }
       }
